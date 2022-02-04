@@ -33,6 +33,13 @@ public class Transportista extends Persona {
         this.nickName = nickName;
     }
 
+    public String toString(){
+        return (super.toString()+"--Nickname:"+nickName+"--ExpYears:"+expYears);
+
+    }
+
+
+
 
 
     

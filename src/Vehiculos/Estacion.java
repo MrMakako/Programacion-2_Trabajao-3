@@ -15,6 +15,14 @@ public class Estacion {
     private int x;
     private int y;
 
+    public Estacion(int x, int y){
+
+        this.x=x;
+        this.y=y;
+
+
+    }
+
     
     /**
      * Get the value of y

@@ -13,7 +13,10 @@ public class Estudiante extends Persona {
 
     
     public Estudiante() {
+
+
     }
+
 
     public Estudiante(String name, int id, Date birthday, int studentId) {
         super(name, id, birthday);
@@ -42,8 +45,10 @@ public class Estudiante extends Persona {
 
     @Override
     public String toString() {
-        return "ID Estudiante: " + studentId + " Clases: " + classList;
+        return super.toString() +"ID Estudiante: " + studentId + " Clases: " + classList;
     }
+
+
 
     
 

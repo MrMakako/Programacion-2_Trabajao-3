@@ -144,10 +144,12 @@ public class Main {
 
                 }
                 case 2: {
+                    System.out.println("Crear Ruta");
 
-                    System.out.println("Crear Alumno ");
 
-                    BaseDatos.AddEstudiante(EntradaStr("Nombe>>"),EntradaInt("Id>>"),EntradaFecha(),EntradaInt("Id Estudaiante>"));
+
+
+
 
 
 
@@ -164,13 +166,34 @@ public class Main {
 
                 case 3: {
 
+                    System.out.println("Crear Alumno ");
+
+                    BaseDatos.AddEstudiante(EntradaStr("Nombe>>"),EntradaInt("Id>>"),EntradaFecha(),EntradaInt("Id Estudaiante>"));
+
 
 
 
                 }
                 case 4: {
+                    System.out.println("Agregar clase a estudainte");
+                    BaseDatos.printEstudiantes();
+                    int alumno=EntradaInt("Alumno>>");
+
+                    BaseDatos.printClases();
+                    int Clase=EntradaInt("Clase>>");
+
+                    BaseDatos.EstudianteClase(alumno,BaseDatos.getClase(Clase));
+
+                    break;
+
+
+
+
                 }
                 case 5:{
+
+
+
 
 
                 }
