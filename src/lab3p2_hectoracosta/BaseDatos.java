@@ -40,8 +40,8 @@ public class BaseDatos {
 
     }
 
-    public void AddEstacion(int x,int y ){
-        ListaEstaciones.add(new Estacion(x,y));
+    public void AddEstacion(int x,int y,String nombre ){
+        ListaEstaciones.add(new Estacion(x,y,nombre));
 
     }
 

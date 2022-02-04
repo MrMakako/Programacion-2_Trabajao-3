@@ -10,6 +10,9 @@ public class Simulacion {
     private Transporte Transporte;
     private Transportista Driver;
     private ArrayList<Estacion> estaciones = new ArrayList();
+
+
+
     
     public void subirAlumno(Estudiante alumno){
         if(Transporte.getEstudiantes().size() <= Transporte.getCapacity()){
@@ -18,6 +21,29 @@ public class Simulacion {
             JOptionPane.showMessageDialog(null, "Transporte lleno");
         }
     };
+
+    public void Menu(){
+
+
+            System.out.println("0. Salir\n" +
+                    "1. Subir alumno al transporte\n" +
+                    "2. Bajar alumno del transporte\n" +
+                    "3. Listar alumnos del transporte\n" +
+                    "4. Escoger transportista\n" +
+                    "5. Quitar transportista\n" +
+                    "6. Añadir ruta\n" +
+                    "7. Quitar ruta\n" +
+                    "8. Imprimir transporte\n" +
+                    "9. Comenza");
+
+
+
+
+
+
+    }
+
+
     
     public void bajarAlumno(Estudiante alumno){
         Transporte.getEstudiantes().remove(alumno);

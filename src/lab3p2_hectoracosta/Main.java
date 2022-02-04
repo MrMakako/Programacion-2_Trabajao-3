@@ -75,7 +75,61 @@ public class Main {
 
     }
 
+
+    public static void Opciones(int option){
+
+        switch (option){
+            case 0:{
+
+                System.out.println("Regresar");
+
+
+
+
+
+                break;
+
+            }
+            case 1:{
+
+
+
+                break;
+            }
+            case 2:{
+
+
+                break;}
+            case 3:{break;}
+            case 4:{break;}
+            case 5:{break;}
+            case 6:{break;}
+            case 7:{break;}
+
+
+
+
+
+
+
+        }
+
+
+    }
+
+
     public static BaseDatos BaseDatos= new BaseDatos();
+    public static Simulacion Sim=new Simulacion();
+
+    public static int EntradaId(int code){
+        if(BaseDatos.Findcode(code)==-1){
+            System.out.println("Codigo existente intente de nuevo");
+            EntradaId(code);
+        }
+        System.out.println("Codigo  Valido!!!!!");
+        return code;
+
+    }
 
 
 
@@ -137,6 +191,8 @@ public class Main {
 
                     BaseDatos.AddClase(nombre, id);
 
+                    break;
+
 
 
 
@@ -148,9 +204,7 @@ public class Main {
 
 
 
-
-
-
+                    BaseDatos.AddEstacion(EntradaInt("Poscion x>>"),EntradaInt("Posicion Y >>"),EntradaStr("Nombre de Estacion"));
 
 
 
@@ -171,7 +225,7 @@ public class Main {
                     BaseDatos.AddEstudiante(EntradaStr("Nombe>>"),EntradaInt("Id>>"),EntradaFecha(),EntradaInt("Id Estudaiante>"));
 
 
-
+                    break;
 
                 }
                 case 4: {
@@ -192,6 +246,13 @@ public class Main {
                 }
                 case 5:{
 
+                    System.out.println("crear transportista");
+
+
+
+
+                    BaseDatos.AddTransportista(EntradaStr("Nombre>>"),EntradaId(EntradaInt("ID>>")),EntradaFecha(),EntradaInt("Exp years>>"),EntradaStr("Nicjname>>"));
+
 
 
 
@@ -199,10 +260,18 @@ public class Main {
                 }
                 case 6:{
 
+                    break;
+
 
                 }
 
                 case 7:{
+
+
+                    System.out.println("Simulacion");
+
+
+                    break;
 
 
 

@@ -15,10 +15,11 @@ public class Estacion {
     private int x;
     private int y;
 
-    public Estacion(int x, int y){
+    public Estacion(int x, int y,String nombre){
 
         this.x=x;
         this.y=y;
+        this.nombre= nombre;
 
 
     }
