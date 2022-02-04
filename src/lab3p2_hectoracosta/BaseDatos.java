@@ -8,11 +8,20 @@ public class BaseDatos {
     ArrayList<Transportista>ListaTransportistas =  new ArrayList<Transportista>();
     ArrayList<Estudiante> ListaEstudiantes= new ArrayList<Estudiante>();
 
+    public void BaseDatos(){
+
+
+
+    }
+
 
 
 
     public void AddEstudiante(String name, int id, Date birthday, int studentId ){
         ListaEstudiantes.add(new Estudiante(name,id,birthday,studentId));
+
+
+
 
 
 
@@ -54,6 +63,20 @@ public class BaseDatos {
 
 
     }
+
+    public void printEstudiantes(){
+        for(Estudiante c:ListaEstudiantes){
+            c.toString();
+
+
+        }
+        System.out.println("--------");
+
+
+
+
+    }
+
 
 
     public ArrayList<Clase> getListaClases() {

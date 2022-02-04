@@ -75,6 +75,8 @@ public class Main {
 
     }
 
+    public static BaseDatos BaseDatos= new BaseDatos();
+
 
 
 
@@ -92,7 +94,7 @@ public class Main {
 
         int option;
 
-        BaseDatos BaseDatos= new BaseDatos();
+
 
 
         boolean prog = true;
@@ -188,6 +190,13 @@ public class Main {
                     break;
 
 
+                }
+
+                case 9:{}
+
+                case 10:{
+                    BaseDatos.printEstudiantes();
+                    break;
                 }
 
 
