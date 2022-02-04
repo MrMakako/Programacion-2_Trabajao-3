@@ -9,6 +9,11 @@ package Vehiculos;
  *
  * @author ThunderKnight
  */
-public class MotoTaxi {
+public class MotoTaxi extends Transporte {
+
+    public MotoTaxi(String plate, String color, String driver) {
+        super(plate, color, driver);
+        this.capacity = 2;
+    }
     
 }

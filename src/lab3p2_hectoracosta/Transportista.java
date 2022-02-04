@@ -1,4 +1,3 @@
-
 package lab3p2_hectoracosta;
 
 import java.util.Date;
@@ -33,7 +32,5 @@ public class Transportista extends Persona {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
-       
-    
     
 }

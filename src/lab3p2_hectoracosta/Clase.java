@@ -1,4 +1,3 @@
-
 package lab3p2_hectoracosta;
 
 public class Clase {
