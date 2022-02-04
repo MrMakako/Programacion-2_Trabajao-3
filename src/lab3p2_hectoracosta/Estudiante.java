@@ -40,7 +40,12 @@ public class Estudiante extends Persona {
         this.classList.add(clase);
     }
 
+    @Override
+    public String toString() {
+        return "ID Estudiante: " + studentId + " Clases: " + classList;
+    }
 
+    
 
     
 }

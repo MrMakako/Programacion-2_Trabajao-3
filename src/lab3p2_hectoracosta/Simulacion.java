@@ -6,32 +6,30 @@ import javax.swing.JOptionPane;
 
 public class Simulacion {
     
+    private Transporte Transporte;
     
-    
-    public void selectTransport(){
-         
-        
-        
-        int opt = Integer.parseInt( JOptionPane.showInputDialog("Que transporte desea usar en esta simulacion?\n1)Bus\n2)Rapidito\n3)Taxi\n4)MotoTaxi"));
-        switch(opt){
-            case 1:
-                
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-                
-                break;
+    public void subirAlumno(Estudiante alumno){
+        if(Transporte.getEstudiantes().size() <= Transporte.getCapacity()){
+            Transporte.addAlumno(alumno);
+        }else{
+            JOptionPane.showMessageDialog(null, "Transporte lleno");
         }
-        
+    };
+    
+    public void bajarAlumno(Estudiante alumno){
+        Transporte.getEstudiantes().remove(alumno);
     }
     
-    public void subirAlumnoBus(Estudiante Alumno){
-        
+    
+    
+    public void listarAlumnos(){
+        String estudiantesBus = "";
+        for (Estudiante estudiante : Transporte.getEstudiantes()) {
+            estudiantesBus += "\n" + estudiante + "\n";
+        }
+        JOptionPane.showMessageDialog(null,estudiantesBus);
     }
+    
+    
     
 }
