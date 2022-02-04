@@ -5,6 +5,9 @@
  */
 package Vehiculos;
 
+import java.util.ArrayList;
+import lab3p2_hectoracosta.Estudiante;
+
 /**
  *
  * @author ThunderKnight
@@ -13,12 +16,11 @@ public class Taxi extends Transporte{
 
     private int taxiNumber;
 
-    public Taxi(int taxiNumber, String plate, String color, String driver) {
-        super(plate, color, driver);
+    public Taxi(int taxiNumber, String plate, String color, String driver, ArrayList estudiantes) {
+        super(plate, color, driver, estudiantes);
         this.taxiNumber = taxiNumber;
         this.capacity = 4;
     }
-    
     /**
      * Get the value of taxiNumber
      *
@@ -36,12 +38,4 @@ public class Taxi extends Transporte{
     public void setTaxiNumber(int taxiNumber) {
         this.taxiNumber = taxiNumber;
     }
-
-    
-    public Taxi(String plate, String color, String driver) {
-        super(plate, color, driver);
-    }
-    
-    
-    
 }

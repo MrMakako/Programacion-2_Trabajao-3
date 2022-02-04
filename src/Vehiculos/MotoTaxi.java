@@ -5,14 +5,17 @@
  */
 package Vehiculos;
 
+import java.util.ArrayList;
+import lab3p2_hectoracosta.Estudiante;
+
 /**
  *
  * @author ThunderKnight
  */
 public class MotoTaxi extends Transporte {
-
-    public MotoTaxi(String plate, String color, String driver) {
-        super(plate, color, driver);
+    
+    public MotoTaxi(String plate, String color, String driver, ArrayList estudiantes) {
+        super(plate, color, driver,estudiantes);
         this.capacity = 2;
     }
     

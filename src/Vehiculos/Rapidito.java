@@ -15,21 +15,12 @@ import lab3p2_hectoracosta.Estudiante;
 public class Rapidito extends Transporte{
     
     private int seats;
-    private ArrayList<Estudiante> alumnos = new ArrayList();
 
-    public Rapidito(int seats, String plate, String color, String driver, ArrayList alumnos) {
-        super(plate, color, driver);
+    public Rapidito(int seats, String plate, String color, String driver, ArrayList estudiantes) {
+        super(plate, color, driver, estudiantes);
         this.seats = seats;
-        this.alumnos = alumnos;
+      
         this.capacity = seats;
-    }
-
-    public ArrayList<Estudiante> getAlumnos() {
-        return alumnos;
-    }
-
-    public void setAlumnos(ArrayList<Estudiante> alumnos) {
-        this.alumnos = alumnos;
     }
     
     /**

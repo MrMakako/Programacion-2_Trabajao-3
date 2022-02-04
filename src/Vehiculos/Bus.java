@@ -7,22 +7,12 @@ public class Bus extends Transporte {
     
     private int seats;
     private int standing;
-    private ArrayList<Estudiante> alumnos = new ArrayList();
     
-    public Bus(int seats, int standing,String plate, String color, String driver, ArrayList alumnos) {
-        super(plate, color, driver);
+    public Bus(int seats, int standing,String plate, String color, String driver, ArrayList estudiantes) {
+        super(plate, color, driver,estudiantes);
         this.seats = seats;
         this.standing = standing;
         this.capacity = seats + standing;
-        this.alumnos = alumnos;
-    }
-
-    public ArrayList<Estudiante> getAlumnos() {
-        return alumnos;
-    }
-
-    public void setAlumnos(ArrayList<Estudiante> alumnos) {
-        this.alumnos = alumnos;
     }
     
     /**
@@ -42,7 +32,6 @@ public class Bus extends Transporte {
     public void setStanding(int standing) {
         this.standing = standing;
     }
-
     
     /**
      * Get the value of seats

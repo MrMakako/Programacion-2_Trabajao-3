@@ -6,6 +6,7 @@
 package Vehiculos;
 
 import java.util.ArrayList;
+import lab3p2_hectoracosta.Estudiante;
 
 /**
  *
@@ -17,14 +18,30 @@ public class Transporte {
     private String color;    
     private String driver;
     public int capacity;
+    private ArrayList<Estudiante> estudiantes = new ArrayList();
     private ArrayList<Estacion> estaciones = new ArrayList();
 
-    public Transporte(String plate, String color, String driver) {
+    public Transporte(String plate, String color, String driver, ArrayList estudiantes) {
         this.plate = plate;
         this.color = color;
         this.driver = driver;
+        this.estudiantes  = estudiantes;
     }
 
+    public void addAlumno(Estudiante alumno){
+        this.estudiantes.add(alumno);
+    }
+    
+    public ArrayList<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
+    public void setEstudiantes(ArrayList<Estudiante> estudiantes) {
+        this.estudiantes = estudiantes;
+    }
+
+    
+    
     public int getCapacity() {
         return capacity;
     }
