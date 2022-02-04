@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class Simulacion {
     
-    private Transporte Transporte;
+    public Transporte Transporte;
     private Transportista Driver;
     private ArrayList<Estacion> estaciones = new ArrayList();
 
@@ -21,6 +21,10 @@ public class Simulacion {
             JOptionPane.showMessageDialog(null, "Transporte lleno");
         }
     };
+
+    public ArrayList<Estacion> getEstaciones() {
+        return estaciones;
+    }
 
     public void Menu(){
 
@@ -145,6 +149,15 @@ public class Simulacion {
         
         return masCercana;
     }
-    
+    public void ListarEstaciones(){
+        int index=0;
+        for (Estacion c:estaciones){
+            System.out.println(index+"-"+c.toString());
+            index ++;
+        }
+
+
+
+    }
     
 }

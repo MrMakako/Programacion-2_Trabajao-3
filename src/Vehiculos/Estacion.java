@@ -81,6 +81,12 @@ public class Estacion {
         this.nombre = nombre;
     }
 
+    public String toString(){
+
+        return("---Nombre Estacion" +nombre+"--posicion" +x+","+y);
+
+    }
+
     
     
 }

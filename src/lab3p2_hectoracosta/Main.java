@@ -1,5 +1,6 @@
 package lab3p2_hectoracosta;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
@@ -76,21 +77,36 @@ public class Main {
     }
 
 
-    public static void Opciones(int option){
+    public static boolean Opciones(int option){
 
         switch (option){
             case 0:{
 
+
                 System.out.println("Regresar");
+                return false;
 
 
 
 
 
-                break;
+
+
+
 
             }
             case 1:{
+
+                System.out.println("Subir alumnos al transporte");
+
+                BaseDatos.printEstudiantes();
+
+
+
+
+                Sim.subirAlumno(BaseDatos.getEstudiante(EntradaInt("Estudiante>>")));
+
+
 
 
 
@@ -98,13 +114,69 @@ public class Main {
             }
             case 2:{
 
+                System.out.println("Bajar Alumno");
+
+                Sim.listarAlumnos();
+
+                Sim.bajarAlumno(Sim.Transporte.getEstudiantes().get(EntradaInt("Alumno>>")));
+
 
                 break;}
-            case 3:{break;}
-            case 4:{break;}
-            case 5:{break;}
-            case 6:{break;}
-            case 7:{break;}
+            case 3:{
+                Sim.listarAlumnos();
+
+
+                break;
+            }
+            case 4:{
+                System.out.println("Escoger transportista");
+
+                BaseDatos.printTransportistas();
+
+                Sim.escogerTransportista(BaseDatos.getTransportista(EntradaInt("Transpotista>>")));
+
+                break;}
+
+
+            case 5:{
+
+                System.out.println("Transportista Removido");
+                Sim.quitarTransportista();
+
+
+
+                break;
+
+
+            }
+            case 6:{
+                System.out.println("Anadir Ruta");
+
+                BaseDatos.printEstacion();
+                Sim.addRuta(BaseDatos.getEstacion(EntradaInt("Estacion>>")));
+
+            }
+
+            case 7:{
+
+                Sim.ListarEstaciones();
+
+                Sim.quitarRuta(Sim.getEstaciones().get(EntradaInt("Estacion>>")));
+
+
+
+            }
+            case 8:{
+
+                Sim.printTransporte();
+            }
+
+            case 9:{
+                System.out.println("Empezando");
+                Sim.start();
+
+            }
+
 
 
 
@@ -114,12 +186,17 @@ public class Main {
 
         }
 
+        return true;
+
 
     }
 
 
     public static BaseDatos BaseDatos= new BaseDatos();
     public static Simulacion Sim=new Simulacion();
+
+
+
 
     public static int EntradaId(int code){
         if(BaseDatos.Findcode(code)==-1){
@@ -140,6 +217,20 @@ public class Main {
 
 
     public static void main(String args[]) {
+
+        Date l= new Date(LocalDate.now().getYear(), 3,4);
+
+        BaseDatos.AddClase("Fil",12312);
+        BaseDatos.AddClase("Mate",82903);
+        BaseDatos.AddEstudiante("Diego",232,l,4324);
+        BaseDatos.AddEstudiante("pollo",343,l,3434);
+
+        BaseDatos.EstudianteClase(0,BaseDatos.getClase(0));
+        BaseDatos.EstudianteClase(1,BaseDatos.getClase(0));
+
+
+
+
 
 
 
@@ -260,6 +351,11 @@ public class Main {
                 }
                 case 6:{
 
+
+                    System.out.println("Crear Transporte");
+                    System.out.println("1-Moto taxi"+"\n2-Rapidito"+"\nBus");
+
+
                     break;
 
 
@@ -269,6 +365,14 @@ public class Main {
 
 
                     System.out.println("Simulacion");
+
+                    boolean sim=true;
+                    while (sim){
+                        Sim.Menu();
+                        sim=Opciones(EntradaInt("opcioh>>"));
+
+
+                    }
 
 
                     break;

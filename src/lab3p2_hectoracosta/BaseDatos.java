@@ -1,6 +1,8 @@
 package lab3p2_hectoracosta;
 
 import Vehiculos.Estacion;
+import Vehiculos.MotoTaxi;
+import Vehiculos.Transporte;
 
 import java.beans.PropertyEditorSupport;
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ public class BaseDatos {
     ArrayList<Estudiante> ListaEstudiantes= new ArrayList<Estudiante>();
     ArrayList<Estacion> ListaEstaciones= new ArrayList<Estacion>();
     ArrayList<Integer> Codigos= new ArrayList<Integer>();
+    ArrayList<Transporte>ListaTransportes= new ArrayList<Transporte>();
 
 
 
@@ -23,6 +26,19 @@ public class BaseDatos {
 
 
 
+
+    }
+
+    public void AddTransporte(int opt,String Placa,String Transportista,String color){
+
+
+        switch (opt){
+
+            case 1:{
+
+
+            }
+        }
 
     }
 
@@ -139,11 +155,31 @@ public class BaseDatos {
 
     }
 
+    public void printEstacion(){
+        int index=0;
+        for(Estacion c: ListaEstaciones){
+            System.out.println(index+"-"+c.toString());
+            index++;
+
+
+
+        }
+        System.out.println("--------");
+
+
+
+    }
+
+
 
 
     public ArrayList<Clase> getListaClases() {
         return ListaClases;
     }
+    public Estacion getEstacion(int index) {
+        return ListaEstaciones.get(index);
+    }
+
 
     public ArrayList<Transportista> getListaTransportistas() {
         return ListaTransportistas;
@@ -160,9 +196,27 @@ public class BaseDatos {
 
     }
 
+    public Estudiante getEstudiante(int index){
+        return ListaEstudiantes.get(index);
+
+
+    }
+
+    public Transportista getTransportista(int index){
+        return ListaTransportistas.get(index);
+
+
+    }
+
     public void EstudianteClase(int index,Clase c){
 
         ListaEstudiantes.get(index).addClass(c);
+
+
+
+    }
+
+    public void Listar(){
 
 
 
