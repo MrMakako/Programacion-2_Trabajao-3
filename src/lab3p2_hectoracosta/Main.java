@@ -1,5 +1,6 @@
 package lab3p2_hectoracosta;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -55,8 +56,18 @@ public class Main {
                 case 1: {
 
 
+
+
+
+
                 }
                 case 2: {
+
+                    System.out.println("Crear Clases");
+
+
+
+
                 }
 
                 case 3: {
@@ -65,7 +76,7 @@ public class Main {
                 }
                 case 5:{
 
-                    
+
                 }
 
 

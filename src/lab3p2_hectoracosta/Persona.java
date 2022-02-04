@@ -16,6 +16,8 @@ public class Persona {
         this.id = id;
         this.birthday = birthday;
     }
+
+    //getters
     
     public int getId() {
         return id;

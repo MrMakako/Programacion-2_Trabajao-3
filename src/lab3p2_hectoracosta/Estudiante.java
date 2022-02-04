@@ -8,6 +8,9 @@ public class Estudiante extends Persona {
 
     private int studentId;
     private ArrayList<Clase> classList = new ArrayList();
+
+
+
     
     public Estudiante() {
     }
@@ -36,5 +39,8 @@ public class Estudiante extends Persona {
     public void addClass(Clase clase){
         this.classList.add(clase);
     }
+
+
+
     
 }

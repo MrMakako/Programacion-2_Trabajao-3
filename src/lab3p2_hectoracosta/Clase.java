@@ -5,6 +5,24 @@ public class Clase {
     private String nombre;
     private int id;
 
+
+
+
+
+
+
+    public Clase(String nombre, int id ){
+        this.nombre=nombre;
+        this.id=id;
+
+
+
+    }
+
+
+
+
+
     public String getNombre() {
         return nombre;
     }
@@ -20,4 +38,11 @@ public class Clase {
     public void setId(int id) {
         this.id = id;
     }
+
+
+
+
+
+
+
 }
