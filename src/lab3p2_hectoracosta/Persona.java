@@ -41,5 +41,11 @@ public class Persona {
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
+
+
+    public String toString(){
+        return ("Nombre:"+name+"--Id:"+id+"--Birthday:"+birthday);
+
+    }
     
 }

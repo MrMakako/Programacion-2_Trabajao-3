@@ -32,5 +32,8 @@ public class Transportista extends Persona {
     public void setNickName(String nickName) {
         this.nickName = nickName;
     }
+
+
+
     
 }

@@ -1,9 +1,13 @@
 package lab3p2_hectoracosta;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+
+
+
 
 
     public static void menu(){
@@ -29,6 +33,51 @@ public class Main {
 
     }
 
+    public static int EntradaInt(String mensaje){
+        Scanner sc = new Scanner(System.in);
+        System.out.print(mensaje);
+        int n=sc.nextInt();
+        return n;
+
+
+
+    }
+
+    public static String  EntradaStr(String mensaje){
+        Scanner sc = new Scanner(System.in);
+        System.out.print(mensaje);
+        sc.useDelimiter("\\n");
+        String  n=sc.next();
+        return n;
+
+
+
+    }
+
+    public static Date  EntradaFecha(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Year:");
+        int y= sc.nextInt();
+
+        System.out.println("Month");
+        int m= sc.nextInt();
+
+        System.out.println("dia");
+        int d= sc.nextInt();
+
+
+        sc.useDelimiter("\\n");
+        Date n=new Date (y,m,d);
+        return n;
+
+
+
+    }
+
+
+
+
 
 
 
@@ -36,9 +85,14 @@ public class Main {
 
     public static void main(String args[]) {
 
-        Scanner sc = new Scanner(System.in);
+
+
+
+
 
         int option;
+
+        BaseDatos BaseDatos= new BaseDatos();
 
 
         boolean prog = true;
@@ -48,12 +102,38 @@ public class Main {
 
 
             System.out.print(">>");
-            option = sc.nextInt();
+            option = EntradaInt("");
 
 
             switch (option) {
 
+                case 0:{
+                    System.out.println("saliendo");
+
+
+
+
+
+
+                    break;
+
+
+
+
+
+
+
+
+                }
+
                 case 1: {
+                    System.out.println("Crear Clases");
+
+                    String nombre=EntradaStr("Nombre>>");
+                    int id=EntradaInt("ID>>");
+
+
+                    BaseDatos.AddClase(nombre, id);
 
 
 
@@ -63,7 +143,17 @@ public class Main {
                 }
                 case 2: {
 
-                    System.out.println("Crear Clases");
+                    System.out.println("Crear Alumno ");
+
+                    BaseDatos.AddEstudiante(EntradaStr("Nombe>>"),EntradaInt("Id>>"),EntradaFecha(),EntradaInt("Id Estudaiante>"));
+
+
+
+
+
+
+
+                   break;
 
 
 
@@ -71,10 +161,31 @@ public class Main {
                 }
 
                 case 3: {
+
+
+
+
                 }
                 case 4: {
                 }
                 case 5:{
+
+
+                }
+                case 6:{
+
+
+                }
+
+                case 7:{
+
+
+
+                }
+                case 8:{
+                    BaseDatos.printClases();
+
+                    break;
 
 
                 }
@@ -85,7 +196,13 @@ public class Main {
 
         }
 
+
+
+
+
     }
+
+
 
     
 }

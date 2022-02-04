@@ -40,6 +40,13 @@ public class Clase {
     }
 
 
+    public String toString(){
+
+        return ("Id:"+id+"--"+"Nombre:"+nombre);
+
+    }
+
+
 
 
 

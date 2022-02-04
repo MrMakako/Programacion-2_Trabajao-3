@@ -44,6 +44,18 @@ public class BaseDatos {
     }
 
 
+    public void printClases(){
+        for(Clase c:ListaClases){
+            c.toString();
+
+
+        }
+        System.out.println("--------");
+
+
+    }
+
+
     public ArrayList<Clase> getListaClases() {
         return ListaClases;
     }
@@ -55,4 +67,9 @@ public class BaseDatos {
     public ArrayList<Estudiante> getListaEstudiantes() {
         return ListaEstudiantes;
     }
+
+
+
+
+
 }
