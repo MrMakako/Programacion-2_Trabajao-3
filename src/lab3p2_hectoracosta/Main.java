@@ -196,6 +196,7 @@ public class Main {
 
                 BaseDatos.printVehiculos();
                 Sim.setTransporte(BaseDatos.getTransporte(EntradaInt("Transporte>>")));
+                break;
 
 
 
@@ -424,6 +425,10 @@ public class Main {
                 }
 
                 case 9:{
+
+
+                    BaseDatos.printEstacion();
+                    break;
 
                 }
 

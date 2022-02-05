@@ -138,18 +138,31 @@ public class Simulacion {
                 distancias.add(ans);
             
         }
-        
-        double minDistance  = distancias.get(0);
-        for (Double distancia : distancias) {
-           if(distancia < minDistance){
-               minDistance = distancia;
-           }
+        try{
+            double minDistance  = distancias.get(0);
+            for (Double distancia : distancias) {
+                if(distancia < minDistance){
+                    minDistance = distancia;
+
+
+                    int index1 = distancias.indexOf(minDistance);
+                    Estacion masCercana = estaciones.get(index1);
+                    return masCercana;
+                }
+            }
+
+
+
+        }catch(Exception e){
+            System.out.println("Recorrido finalizado");
         }
+
+        return null;
+
+
+
         
-        int index1 = distancias.indexOf(minDistance);
-        Estacion masCercana = estaciones.get(index1);
-        
-        return masCercana;
+
     }
     public void ListarEstaciones(){
         int index=0;

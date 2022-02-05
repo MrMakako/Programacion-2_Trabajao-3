@@ -120,6 +120,11 @@ public class Transporte {
         this.estaciones.add(estacion);
     }
 
+    public String toString(){
+
+
+        return ("--Placa:"+plate+"--" +"Color"+color+"Capacidad");
+    }
 
 
 
