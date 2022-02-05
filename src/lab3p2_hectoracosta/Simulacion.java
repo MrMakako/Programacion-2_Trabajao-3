@@ -38,7 +38,7 @@ public class Simulacion {
                     "6. Añadir ruta\n" +
                     "7. Quitar ruta\n" +
                     "8. Imprimir transporte\n" +
-                    "9. Comenza");
+                    "9. Comenza"+"\n10. Escoger vehiculo");
 
 
 
