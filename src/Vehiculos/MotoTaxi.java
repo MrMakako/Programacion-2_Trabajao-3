@@ -14,8 +14,8 @@ import lab3p2_hectoracosta.Estudiante;
  */
 public class MotoTaxi extends Transporte {
     
-    public MotoTaxi(String plate, String color, String driver, ArrayList estudiantes) {
-        super(plate, color, driver,estudiantes);
+    public MotoTaxi(String plate, String color) {
+        super(plate, color);
         this.capacity = 2;
     }
     

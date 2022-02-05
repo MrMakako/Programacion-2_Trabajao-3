@@ -16,8 +16,8 @@ public class Taxi extends Transporte{
 
     private int taxiNumber;
 
-    public Taxi(int taxiNumber, String plate, String color, String driver, ArrayList estudiantes) {
-        super(plate, color, driver, estudiantes);
+    public Taxi(int taxiNumber, String plate, String color) {
+        super(plate, color);
         this.taxiNumber = taxiNumber;
         this.capacity = 4;
     }

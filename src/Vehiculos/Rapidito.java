@@ -16,8 +16,8 @@ public class Rapidito extends Transporte{
     
     private int seats;
 
-    public Rapidito(int seats, String plate, String color, String driver, ArrayList estudiantes) {
-        super(plate, color, driver, estudiantes);
+    public Rapidito(int seats, String plate, String color) {
+        super(plate, color);
         this.seats = seats;
       
         this.capacity = seats;

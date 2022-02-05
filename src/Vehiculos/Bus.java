@@ -8,11 +8,10 @@ public class Bus extends Transporte {
     private int seats;
     private int standing;
     
-    public Bus(int seats, int standing,String plate, String color, String driver, ArrayList estudiantes) {
-        super(plate, color, driver,estudiantes);
-        this.seats = seats;
-        this.standing = standing;
-        this.capacity = seats + standing;
+    public Bus(String plate, String color) {
+        super(plate, color);
+
+
     }
     
     /**

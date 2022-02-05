@@ -1,5 +1,8 @@
 package lab3p2_hectoracosta;
 
+import Vehiculos.Bus;
+import Vehiculos.MotoTaxi;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -227,6 +230,15 @@ public class Main {
 
         BaseDatos.EstudianteClase(0,BaseDatos.getClase(0));
         BaseDatos.EstudianteClase(1,BaseDatos.getClase(0));
+
+        BaseDatos.ListaTransportes.add(new MotoTaxi("Color","erwjeiorj"));
+        BaseDatos.ListaTransportes.add(new Bus("ere","erer"));
+
+        BaseDatos.AddEstacion(4,5,"Pot");
+        BaseDatos.AddEstacion(3,1,"Pot11");
+
+        BaseDatos.AddEstacion(6,56,"Pot23");
+
 
 
 

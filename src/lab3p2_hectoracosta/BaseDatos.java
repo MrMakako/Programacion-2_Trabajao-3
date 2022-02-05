@@ -1,5 +1,6 @@
 package lab3p2_hectoracosta;
 
+import Vehiculos.Bus;
 import Vehiculos.Estacion;
 import Vehiculos.MotoTaxi;
 import Vehiculos.Transporte;
@@ -27,6 +28,9 @@ public class BaseDatos {
 
 
 
+
+
+
     }
 
     public void AddTransporte(int opt,String Placa,String Transportista,String color){
@@ -35,8 +39,14 @@ public class BaseDatos {
         switch (opt){
 
             case 1:{
+                ListaTransportes.add(new MotoTaxi(Placa,color));
 
 
+
+            }
+            case 2:{
+
+                ListaTransportes.add(new Bus(Placa,color));
             }
         }
 

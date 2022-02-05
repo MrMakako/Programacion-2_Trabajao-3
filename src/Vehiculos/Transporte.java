@@ -21,12 +21,15 @@ public class Transporte {
     private ArrayList<Estudiante> estudiantes = new ArrayList();
     private ArrayList<Estacion> estaciones = new ArrayList();
 
-    public Transporte(String plate, String color, String driver, ArrayList estudiantes) {
+    public Transporte(String plate, String color) {
         this.plate = plate;
         this.color = color;
-        this.driver = driver;
-        this.estudiantes  = estudiantes;
+
+
     }
+
+
+
 
     public void addAlumno(Estudiante alumno){
         this.estudiantes.add(alumno);
