@@ -176,7 +176,19 @@ public class Main {
 
             case 9:{
                 System.out.println("Empezando");
+                Sim.setEstaciones(BaseDatos.getListaEstaciones());
+
                 Sim.start();
+
+            }
+
+            case 10:{
+                System.out.println("Escoger Transporte");
+
+                BaseDatos.printVehiculos();
+                Sim.setTransporte(BaseDatos.getTransporte(EntradaInt("Transporte>>")));
+
+
 
             }
 
@@ -230,6 +242,8 @@ public class Main {
 
         BaseDatos.EstudianteClase(0,BaseDatos.getClase(0));
         BaseDatos.EstudianteClase(1,BaseDatos.getClase(0));
+
+        BaseDatos.AddTransportista("gel",3423,l,34,"Rald");
 
         BaseDatos.ListaTransportes.add(new MotoTaxi("Color","erwjeiorj"));
         BaseDatos.ListaTransportes.add(new Bus("ere","erer"));
@@ -400,10 +414,22 @@ public class Main {
 
                 }
 
-                case 9:{}
+                case 9:{
+
+                }
 
                 case 10:{
                     BaseDatos.printEstudiantes();
+                    break;
+                }
+
+                case 11:{
+                    BaseDatos.printTransportistas();
+                    break;
+                }
+                case 12:{
+
+                    BaseDatos.printVehiculos();
                     break;
                 }
 

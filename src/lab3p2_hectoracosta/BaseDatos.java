@@ -139,7 +139,7 @@ public class BaseDatos {
         int index=0;
         for(Estudiante c:ListaEstudiantes){
             System.out.println(index+"-"+c.toString());
-            index=0;
+            index++;
 
 
         }
@@ -176,6 +176,30 @@ public class BaseDatos {
         }
         System.out.println("--------");
 
+
+
+    }
+
+
+
+    public void printVehiculos(){
+        int index=0;
+        for(Transporte c: ListaTransportes){
+            System.out.println(index+"-"+c.toString());
+            index++;
+
+
+
+        }
+        System.out.println("--------");
+
+
+
+    }
+
+    public Transporte getTransporte(int index){
+
+       return  ListaTransportes.get(index);
 
 
     }

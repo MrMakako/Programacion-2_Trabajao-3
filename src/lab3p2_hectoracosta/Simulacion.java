@@ -48,7 +48,14 @@ public class Simulacion {
     }
 
 
-    
+    public void setTransporte(Vehiculos.Transporte transporte) {
+        Transporte = transporte;
+    }
+
+    public void setEstaciones(ArrayList<Estacion> estaciones) {
+        this.estaciones = estaciones;
+    }
+
     public void bajarAlumno(Estudiante alumno){
         Transporte.getEstudiantes().remove(alumno);
     }
@@ -62,12 +69,7 @@ public class Simulacion {
     }
     
     public void escogerTransportista(Transportista driver){
-        int driverId = Integer.parseInt( JOptionPane.showInputDialog("Ingres ID del Transportista que desea utilizar: ") );
-        for (Transportista transportista : Main.BaseDatos.getListaTransportistas()) {
-            if(transportista.getId() == driverId){
-               this.Driver = transportista; 
-            }
-        }
+        this.Driver=driver;
     }
     
     public void quitarTransportista(){
@@ -124,7 +126,7 @@ public class Simulacion {
         int x1 = estacionActual.getX();
         int y1 = estacionActual.getY();
         
-        ArrayList<Double> distancias = new ArrayList();
+        ArrayList<Double> distancias = new ArrayList<Double>();
         
         for (Estacion estacione : estaciones) {
             
