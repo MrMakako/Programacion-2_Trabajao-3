@@ -138,6 +138,8 @@ public class Main {
 
                 Sim.escogerTransportista(BaseDatos.getTransportista(EntradaInt("Transpotista>>")));
 
+
+
                 break;}
 
 
@@ -158,6 +160,8 @@ public class Main {
                 BaseDatos.printEstacion();
                 Sim.addRuta(BaseDatos.getEstacion(EntradaInt("Estacion>>")));
 
+                break;
+
             }
 
             case 7:{
@@ -166,19 +170,24 @@ public class Main {
 
                 Sim.quitarRuta(Sim.getEstaciones().get(EntradaInt("Estacion>>")));
 
+                break;
+
 
 
             }
             case 8:{
 
                 Sim.printTransporte();
+                break;
             }
 
             case 9:{
                 System.out.println("Empezando");
-                Sim.setEstaciones(BaseDatos.getListaEstaciones());
+
 
                 Sim.start();
+
+                break;
 
             }
 
